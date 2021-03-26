@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAppDriver", "WindowsAppDriver\WindowsAppDriver.csproj", "{65DD3D4D-34B7-457C-9D0D-F567A603000A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{8689A815-2723-4CB2-ADD6-4C152012944B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineLib", "EngineLib\EngineLib.csproj", "{E7B33168-18B2-4F81-9CA4-C16484DCEDC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65DD3D4D-34B7-457C-9D0D-F567A603000A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DD3D4D-34B7-457C-9D0D-F567A603000A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DD3D4D-34B7-457C-9D0D-F567A603000A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DD3D4D-34B7-457C-9D0D-F567A603000A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8689A815-2723-4CB2-ADD6-4C152012944B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8689A815-2723-4CB2-ADD6-4C152012944B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8689A815-2723-4CB2-ADD6-4C152012944B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8689A815-2723-4CB2-ADD6-4C152012944B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B33168-18B2-4F81-9CA4-C16484DCEDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B33168-18B2-4F81-9CA4-C16484DCEDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B33168-18B2-4F81-9CA4-C16484DCEDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B33168-18B2-4F81-9CA4-C16484DCEDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
