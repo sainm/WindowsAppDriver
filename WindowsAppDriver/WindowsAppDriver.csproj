@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
-            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -33,16 +32,123 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Data"/>
-        <Reference Include="System.Xml"/>
+        <Reference Include="CommandLine, Version=2.8.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379">
+          <HintPath>..\packages\CommandLineParser.2.8.0\lib\net45\CommandLine.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+          <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c">
+          <HintPath>..\packages\NLog.4.7.9\lib\net45\NLog.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.IO.Compression" />
+        <Reference Include="System.Runtime.Serialization" />
+        <Reference Include="System.ServiceModel" />
+        <Reference Include="System.Transactions" />
+        <Reference Include="System.Xml" />
+        <Reference Include="UIAutomationClient" />
+        <Reference Include="UIAutomationTypes" />
+        <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Selenium.WebDriver.4.0.0-beta2\lib\net45\WebDriver.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="WindowsBase" />
+        <Reference Include="WindowsInput, Version=1.0.6.0, Culture=neutral, PublicKeyToken=de2685b4776e9c2e">
+          <HintPath>..\packages\InputSimulatorPlus.1.0.7\lib\net20\WindowsInput.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Program.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Automator\Automator.cs" />
+        <Compile Include="Automator\Capabilities.cs" />
+        <Compile Include="CommandExecutorDispatchTable.cs" />
+        <Compile Include="CommandExecutors\ClearElementExecutor.cs" />
+        <Compile Include="CommandExecutors\ClickElementExecutor.cs" />
+        <Compile Include="CommandExecutors\CloseExecutor.cs" />
+        <Compile Include="CommandExecutors\CollapseComboBoxExecutor.cs" />
+        <Compile Include="CommandExecutors\CommandExecutorBase.cs" />
+        <Compile Include="CommandExecutors\ElementEqualsExecutor.cs" />
+        <Compile Include="CommandExecutors\ExecuteScriptExecutor.cs" />
+        <Compile Include="CommandExecutors\ExpandComboBoxExecutor.cs" />
+        <Compile Include="CommandExecutors\FindChildElementExecutor.cs" />
+        <Compile Include="CommandExecutors\FindChildElementsExecutor.cs" />
+        <Compile Include="CommandExecutors\FindComboBoxSelectedItemExecutor.cs" />
+        <Compile Include="CommandExecutors\FindDataGridCellExecutor.cs" />
+        <Compile Include="CommandExecutors\FindElementExecutor.cs" />
+        <Compile Include="CommandExecutors\FindElementsExecutor.cs" />
+        <Compile Include="CommandExecutors\FindMenuItemExecutor.cs" />
+        <Compile Include="CommandExecutors\GetActiveElementExecutor.cs" />
+        <Compile Include="CommandExecutors\GetCurrentWindowHandleExecutor.cs" />
+        <Compile Include="CommandExecutors\GetDataGridColumnCountExecutor.cs" />
+        <Compile Include="CommandExecutors\GetDataGridRowCountExecutor.cs" />
+        <Compile Include="CommandExecutors\GetElementAttributeExecutor.cs" />
+        <Compile Include="CommandExecutors\GetElementSizeExecutor.cs" />
+        <Compile Include="CommandExecutors\GetElementTextExecutor.cs" />
+        <Compile Include="CommandExecutors\GetOrientationExecutor.cs" />
+        <Compile Include="CommandExecutors\GetWindowHandlesExecutor.cs" />
+        <Compile Include="CommandExecutors\ImplicitlyWaitExecutor.cs" />
+        <Compile Include="CommandExecutors\IsComboBoxExpandedExecutor.cs" />
+        <Compile Include="CommandExecutors\IsElementDisplayedExecutor.cs" />
+        <Compile Include="CommandExecutors\IsElementEnabledExecutor.cs" />
+        <Compile Include="CommandExecutors\IsElementSelectedExecutor.cs" />
+        <Compile Include="CommandExecutors\MouseClickExecutor.cs" />
+        <Compile Include="CommandExecutors\MouseDoubleClickExecutor.cs" />
+        <Compile Include="CommandExecutors\MouseMoveToExecutor.cs" />
+        <Compile Include="CommandExecutors\NewSessionExecutor.cs" />
+        <Compile Include="CommandExecutors\NotImplementedExecutor.cs" />
+        <Compile Include="CommandExecutors\QuitExecutor.cs" />
+        <Compile Include="CommandExecutors\ScreenshotExecutor.cs" />
+        <Compile Include="CommandExecutors\ScrollToComboBoxItemExecutor.cs" />
+        <Compile Include="CommandExecutors\ScrollToDataGridCellExecutor.cs" />
+        <Compile Include="CommandExecutors\ScrollToListBoxItemExecutor.cs" />
+        <Compile Include="CommandExecutors\SelectDataGridCellExecutor.cs" />
+        <Compile Include="CommandExecutors\SelectMenuItemExecutor.cs" />
+        <Compile Include="CommandExecutors\SendKeysToActiveElementExecutor.cs" />
+        <Compile Include="CommandExecutors\SendKeysToElementExecutor.cs" />
+        <Compile Include="CommandExecutors\SetOrientationExecutor.cs" />
+        <Compile Include="CommandExecutors\StatusExecutor.cs" />
+        <Compile Include="CommandExecutors\SubmitElementExecutor.cs" />
+        <Compile Include="CommandExecutors\SwitchToWindowExecutor.cs" />
+        <Compile Include="CommandHelpers\BuildInfo.cs" />
+        <Compile Include="CommandHelpers\OSInfo.cs" />
+        <Compile Include="CommandLineOptions.cs" />
+        <Compile Include="CommonDataGridView.cs" />
+        <Compile Include="ElementsRegistry.cs" />
+        <Compile Include="Extensions\AutomationPropertyHelper.cs" />
+        <Compile Include="Extensions\ByHelper.cs" />
+        <Compile Include="HttpRequest.cs" />
+        <Compile Include="Input\KeyboardModifiers.cs" />
+        <Compile Include="Input\KeyEvent.cs" />
+        <Compile Include="Input\WiniumKeyboard.cs" />
+        <Compile Include="Listener.cs" />
+        <Compile Include="Logger.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="UriDispatchTables.cs" />
     </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+        <Project>{8689a815-2723-4cb2-add6-4c152012944b}</Project>
+        <Name>CommonLib</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\EngineLib\EngineLib.csproj">
+        <Project>{e7b33168-18b2-4f81-9ca4-c16484dcedc4}</Project>
+        <Name>EngineLib</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
