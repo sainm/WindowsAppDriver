@@ -58,7 +58,9 @@ namespace WindowsAppDriver
             var fields = typeof(DriverCommand).GetFields(BindingFlags.Public | BindingFlags.Static);
             foreach (var field in fields)
             {
+                // Console.WriteLine(commandName);
                 var commandName = field.GetValue(null).ToString();
+                Console.WriteLine(commandName);
                 var commandInformation = _commandDictionary[commandName];
                 var commandUriTemplate = new UriTemplate(commandInformation.ResourcePath);
                 var templateTable = FindDispatcherTable(commandInformation.Method);
@@ -77,30 +79,18 @@ namespace WindowsAppDriver
             _commandDictionary.Add(DriverCommand.Status, new CommandInfo("GET", "/status"));
             _commandDictionary.Add(DriverCommand.NewSession, new CommandInfo("POST", "/session"));
             _commandDictionary.Add(DriverCommand.GetSessionList, new CommandInfo("GET", "/sessions"));
-            _commandDictionary.Add(
-                DriverCommand.GetSessionCapabilities,
-                new CommandInfo("GET", "/session/{sessionId}"));
+            _commandDictionary.Add( DriverCommand.GetSessionCapabilities, new CommandInfo("GET", "/session/{sessionId}"));
             _commandDictionary.Add(DriverCommand.Quit, new CommandInfo("DELETE", "/session/{sessionId}"));
-            _commandDictionary.Add(
-                DriverCommand.GetCurrentWindowHandle,
-                new CommandInfo("GET", "/session/{sessionId}/window_handle"));
-            _commandDictionary.Add(
-                DriverCommand.GetWindowHandles,
-                new CommandInfo("GET", "/session/{sessionId}/window_handles"));
+            _commandDictionary.Add(DriverCommand.GetCurrentWindowHandle,new CommandInfo("GET", "/session/{sessionId}/window_handle"));
+            _commandDictionary.Add(DriverCommand.GetWindowHandles,new CommandInfo("GET", "/session/{sessionId}/window_handles"));
             _commandDictionary.Add(DriverCommand.GetCurrentUrl, new CommandInfo("GET", "/session/{sessionId}/url"));
             _commandDictionary.Add(DriverCommand.Get, new CommandInfo("POST", "/session/{sessionId}/url"));
-            _commandDictionary.Add(DriverCommand.GoForward,
-                new CommandInfo("POST", "/session/{sessionId}/forward"));
+            _commandDictionary.Add(DriverCommand.GoForward,new CommandInfo("POST", "/session/{sessionId}/forward"));
             _commandDictionary.Add(DriverCommand.GoBack, new CommandInfo("POST", "/session/{sessionId}/back"));
             _commandDictionary.Add(DriverCommand.Refresh, new CommandInfo("POST", "/session/{sessionId}/refresh"));
-            _commandDictionary.Add(
-                DriverCommand.ExecuteScript,
-                new CommandInfo("POST", "/session/{sessionId}/execute"));
-            _commandDictionary.Add(
-                DriverCommand.ExecuteAsyncScript,
-                new CommandInfo("POST", "/session/{sessionId}/execute_async"));
-            _commandDictionary.Add(
-                DriverCommand.Screenshot,
+            _commandDictionary.Add(DriverCommand.ExecuteScript, new CommandInfo("POST", "/session/{sessionId}/execute"));
+            _commandDictionary.Add(DriverCommand.ExecuteAsyncScript, new CommandInfo("POST", "/session/{sessionId}/execute_async"));
+            _commandDictionary.Add( DriverCommand.Screenshot,
                 new CommandInfo("GET", "/session/{sessionId}/screenshot"));
             _commandDictionary.Add(
                 DriverCommand.SwitchToFrame,
@@ -111,18 +101,14 @@ namespace WindowsAppDriver
             _commandDictionary.Add(
                 DriverCommand.SwitchToWindow,
                 new CommandInfo("POST", "/session/{sessionId}/window"));
-            _commandDictionary.Add(
-                DriverCommand.GetAllCookies,
-                new CommandInfo("GET", "/session/{sessionId}/cookie"));
+            // _commandDictionary.Add(DriverCommand.GetCookie, new CommandInfo("GET", "/session/{sessionId}/cookie"));
+            _commandDictionary.Add(DriverCommand.GetAllCookies, new CommandInfo("GET", "/session/{sessionId}/cookie"));
             _commandDictionary.Add(DriverCommand.AddCookie, new CommandInfo("POST", "/session/{sessionId}/cookie"));
-            _commandDictionary.Add(
-                DriverCommand.DeleteAllCookies,
+            _commandDictionary.Add(DriverCommand.DeleteAllCookies,
                 new CommandInfo("DELETE", "/session/{sessionId}/cookie"));
-            _commandDictionary.Add(
-                DriverCommand.DeleteCookie,
+            _commandDictionary.Add(DriverCommand.DeleteCookie,
                 new CommandInfo("DELETE", "/session/{sessionId}/cookie/{name}"));
-            _commandDictionary.Add(
-                DriverCommand.GetPageSource,
+            _commandDictionary.Add(DriverCommand.GetPageSource,
                 new CommandInfo("GET", "/session/{sessionId}/source"));
             _commandDictionary.Add(DriverCommand.GetTitle, new CommandInfo("GET", "/session/{sessionId}/title"));
             _commandDictionary.Add(

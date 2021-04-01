@@ -9,7 +9,7 @@ namespace WindowsAppDriver
         public static void Main(string[] args)
         {
             var port = 9999;
-            var option = Parser.Default.ParseArguments<CommandLineOptions>(args).WithParsed(o =>
+            Parser.Default.ParseArguments<CommandLineOptions>(args).WithParsed(o =>
             {
                 if (o.Port.HasValue)
                     port = o.Port.Value;

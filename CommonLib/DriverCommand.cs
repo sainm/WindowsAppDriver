@@ -91,10 +91,10 @@ namespace CommonLib
         /// </summary>
         public static readonly string GetAllCookies = "getCookies";
 
-        /// <summary>
-        /// Represents getting cookie command
-        /// </summary>
-        public static readonly string GetCookie = "getCookie";
+        // /// <summary>
+        // /// Represents getting cookie command
+        // /// </summary>
+        // public static readonly string GetCookie = "getCookie";
 
         /// <summary>
         /// Represents deleting a cookie command
@@ -149,7 +149,7 @@ namespace CommonLib
         /// <summary>
         /// Represents TapElement command
         /// </summary>
-        public static readonly string TapElement = "tapElement";
+        // public static readonly string TapElement = "tapElement";
 
         /// <summary>
         /// Represents SubmitElement command
@@ -174,7 +174,7 @@ namespace CommonLib
         /// <summary>
         /// Represents NewWindow command
         /// </summary>
-        public static readonly string NewWindow = "newWindow";
+        // public static readonly string NewWindow = "newWindow";
 
         /// <summary>
         /// Represents SwitchToFrame command
@@ -259,7 +259,7 @@ namespace CommonLib
         /// <summary>
         /// Represents GetElementRect command
         /// </summary>
-        public static readonly string GetElementRect = "getElementRect";
+        // public static readonly string GetElementRect = "getElementRect";
 
         /// <summary>
         /// Represents GetElementAttribute command
@@ -269,7 +269,7 @@ namespace CommonLib
         /// <summary>
         /// Represents GetElementProperty command
         /// </summary>
-        public static readonly string GetElementProperty = "getElementProperty";
+        // public static readonly string GetElementProperty = "getElementProperty";
 
         /// <summary>
         /// Represents GetElementValueOfCSSProperty command
@@ -279,12 +279,12 @@ namespace CommonLib
         /// <summary>
         /// Represents GetComputedAccessibleLabel command
         /// </summary>
-        public static readonly string GetComputedAccessibleLabel = "getComputedAccessibleLabel";
+        // public static readonly string GetComputedAccessibleLabel = "getComputedAccessibleLabel";
 
         /// <summary>
         /// Represents GetComputedAccessibleRole command
         /// </summary>
-        public static readonly string GetComputedAccessibleRole = "getComputedAccessibleRole";
+        // public static readonly string GetComputedAccessibleRole = "getComputedAccessibleRole";
 
         /// <summary>
         /// Represents ElementEquals command
@@ -299,12 +299,12 @@ namespace CommonLib
         /// <summary>
         /// Represents the ElementScreenshot command
         /// </summary>
-        public static readonly string ElementScreenshot = "elementScreenshot";
+        // public static readonly string ElementScreenshot = "elementScreenshot";
 
         /// <summary>
         /// Represents the Print command
         /// </summary>
-        public static readonly string Print = "print";
+        // public static readonly string Print = "print";
 
         /// <summary>
         /// Represents GetOrientation command
@@ -339,12 +339,12 @@ namespace CommonLib
         /// <summary>
         /// Represents GetWindowRect command
         /// </summary>
-        public static readonly string GetWindowRect = "getWindowRect";
+        // public static readonly string GetWindowRect = "getWindowRect";
 
         /// <summary>
         /// Represents SetWindowRect command
         /// </summary>
-        public static readonly string SetWindowRect = "setWindowRect";
+        // public static readonly string SetWindowRect = "setWindowRect";
 
         /// <summary>
         /// Represents MaximizeWindow command
@@ -354,12 +354,12 @@ namespace CommonLib
         /// <summary>
         /// Represents MinimizeWindow command
         /// </summary>
-        public static readonly string MinimizeWindow = "minimizeWindow";
+        // public static readonly string MinimizeWindow = "minimizeWindow";
 
         /// <summary>
         /// Represents FullScreenWindow command
         /// </summary>
-        public static readonly string FullScreenWindow = "fullScreenWindow";
+        // public static readonly string FullScreenWindow = "fullScreenWindow";
 
         /// <summary>
         /// Represents the DismissAlert command
@@ -384,7 +384,7 @@ namespace CommonLib
         /// <summary>
         /// Represents the Authenticate command
         /// </summary>
-        public static readonly string SetAlertCredentials = "setAlertCredentials";
+        // public static readonly string SetAlertCredentials = "setAlertCredentials";
 
         /// <summary>
         /// Represents the ImplicitlyWait command
@@ -404,17 +404,17 @@ namespace CommonLib
         /// <summary>
         /// Represents the SetTimeout command
         /// </summary>
-        public static readonly string GetTimeouts = "getTimeouts";
+        // public static readonly string GetTimeouts = "getTimeouts";
 
         /// <summary>
         /// Represents the Actions command.
         /// </summary>
-        public static readonly string Actions = "actions";
-
-        /// <summary>
-        /// Represents the CancelActions command.
-        /// </summary>
-        public static readonly string CancelActions = "cancelActions";
+        // public static readonly string Actions = "actions";
+        //
+        // /// <summary>
+        // /// Represents the CancelActions command.
+        // /// </summary>
+        // public static readonly string CancelActions = "cancelActions";
 
         /// <summary>
         /// Represents the MouseClick command.
@@ -494,97 +494,97 @@ namespace CommonLib
         /// <summary>
         /// Represents the GetLocation command.
         /// </summary>
-        public static readonly string GetLocation = "getLocation";
+        // public static readonly string GetLocation = "getLocation";
 
         /// <summary>
         /// Represents the SetLocation command.
         /// </summary>
-        public static readonly string SetLocation = "setLocation";
+        // public static readonly string SetLocation = "setLocation";
 
         /// <summary>
         /// Represents the GetAppCache command.
         /// </summary>
-        public static readonly string GetAppCache = "getAppCache";
+        // public static readonly string GetAppCache = "getAppCache";
 
         /// <summary>
         /// Represents the application cache GetStatus command.
         /// </summary>
-        public static readonly string GetAppCacheStatus = "getStatus";
+        // public static readonly string GetAppCacheStatus = "getStatus";
 
         /// <summary>
         /// Represents the ClearAppCache command.
         /// </summary>
-        public static readonly string ClearAppCache = "clearAppCache";
+        // public static readonly string ClearAppCache = "clearAppCache";
 
         /// <summary>
         /// Represents the GetLocalStorageItem command.
         /// </summary>
-        public static readonly string GetLocalStorageItem = "getLocalStorageItem";
+        // public static readonly string GetLocalStorageItem = "getLocalStorageItem";
 
         /// <summary>
         /// Represents the GetLocalStorageKeys command.
         /// </summary>
-        public static readonly string GetLocalStorageKeys = "getLocalStorageKeys";
+        // public static readonly string GetLocalStorageKeys = "getLocalStorageKeys";
 
         /// <summary>
         /// Represents the SetLocalStorageItem command.
         /// </summary>
-        public static readonly string SetLocalStorageItem = "setLocalStorageItem";
+        // public static readonly string SetLocalStorageItem = "setLocalStorageItem";
 
         /// <summary>
         /// Represents the RemoveLocalStorageItem command.
         /// </summary>
-        public static readonly string RemoveLocalStorageItem = "removeLocalStorageItem";
+        // public static readonly string RemoveLocalStorageItem = "removeLocalStorageItem";
 
         /// <summary>
         /// Represents the ClearLocalStorage command.
         /// </summary>
-        public static readonly string ClearLocalStorage = "clearLocalStorage";
+        // public static readonly string ClearLocalStorage = "clearLocalStorage";
 
         /// <summary>
         /// Represents the GetLocalStorageSize command.
         /// </summary>
-        public static readonly string GetLocalStorageSize = "getLocalStorageSize";
+        // public static readonly string GetLocalStorageSize = "getLocalStorageSize";
 
         /// <summary>
         /// Represents the GetSessionStorageItem command.
         /// </summary>
-        public static readonly string GetSessionStorageItem = "getSessionStorageItem";
+        // public static readonly string GetSessionStorageItem = "getSessionStorageItem";
 
         /// <summary>
         /// Represents the GetSessionStorageKeys command.
         /// </summary>
-        public static readonly string GetSessionStorageKeys = "getSessionStorageKeys";
+        // public static readonly string GetSessionStorageKeys = "getSessionStorageKeys";
 
         /// <summary>
         /// Represents the SetSessionStorageItem command.
         /// </summary>
-        public static readonly string SetSessionStorageItem = "setSessionStorageItem";
+        // public static readonly string SetSessionStorageItem = "setSessionStorageItem";
 
         /// <summary>
         /// Represents the RemoveSessionStorageItem command.
         /// </summary>
-        public static readonly string RemoveSessionStorageItem = "removeSessionStorageItem";
+        // public static readonly string RemoveSessionStorageItem = "removeSessionStorageItem";
 
         /// <summary>
         /// Represents the ClearSessionStorage command.
         /// </summary>
-        public static readonly string ClearSessionStorage = "clearSessionStorage";
-
-        /// <summary>
-        /// Represents the GetSessionStorageSize command.
-        /// </summary>
-        public static readonly string GetSessionStorageSize = "getSessionStorageSize";
-
-        /// <summary>
-        /// Represents the GetAvailableLogTypes command.
-        /// </summary>
-        public static readonly string GetAvailableLogTypes = "getAvailableLogTypes";
-
-        /// <summary>
-        /// Represents the GetLog command.
-        /// </summary>
-        public static readonly string GetLog = "getLog";
+        // public static readonly string ClearSessionStorage = "clearSessionStorage";
+        //
+        // /// <summary>
+        // /// Represents the GetSessionStorageSize command.
+        // /// </summary>
+        // public static readonly string GetSessionStorageSize = "getSessionStorageSize";
+        //
+        // /// <summary>
+        // /// Represents the GetAvailableLogTypes command.
+        // /// </summary>
+        // public static readonly string GetAvailableLogTypes = "getAvailableLogTypes";
+        //
+        // /// <summary>
+        // /// Represents the GetLog command.
+        // /// </summary>
+        // public static readonly string GetLog = "getLog";
         
         /// <summary>
         /// Represents additional driver commnad FindDataGridCell.

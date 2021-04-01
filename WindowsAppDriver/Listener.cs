@@ -23,7 +23,7 @@ namespace WindowsAppDriver
 
         public static string UrnPrefix
         {
-            get { return _urnPrefix; }
+            get => _urnPrefix;
 
             set
             {
@@ -87,8 +87,8 @@ namespace WindowsAppDriver
             var method = firstHeaderTokens[0];
             var resourcePath = firstHeaderTokens[1];
 
-            var uriToMatch = new Uri(this.Prefix, resourcePath);
-            var matched = this._dispatcher.Match(method, uriToMatch);
+            var uriToMatch = new Uri(Prefix, resourcePath);
+            var matched = _dispatcher.Match(method, uriToMatch);
 
             if (matched == null)
             {
